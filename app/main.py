@@ -82,7 +82,7 @@ def signup(payload: SignupRequest):
     if existing.data:
         raise HTTPException(status_code=400, detail="Email already registered")
 
-    if payload.initial_cash <= 0 or payload.initial_cash > 100000:
+    if payload.initial_cash <= 0 or payload.initial_cash > 70000000:
         raise HTTPException(status_code=400, detail="Initial cash must be between 0 and 100000")
 
     hashed = hash_password(payload.password)
