@@ -1,4 +1,4 @@
-name: Trading Worker
+name: Trading Worker test
 
 on:
   schedule:
