@@ -64,7 +64,7 @@ export default function Login({ onLogin }) {
               placeholder="Initial cash (max 100000)"
               value={initialCash}
               onChange={(e) => setInitialCash(e.target.value)}
-              max={100000}
+              max={70000000}
               min={1}
               required
               style={{ display: "block", width: "100%", marginBottom: 10, padding: 8 }}
