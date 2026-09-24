@@ -1,7 +1,10 @@
 fastapi
 uvicorn
-sqlalchemy
-psycopg2-binary
+supabase
 python-dotenv
 pandas
 yfinance
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==4.0.1
+sqlalchemy
