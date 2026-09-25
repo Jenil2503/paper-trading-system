@@ -114,7 +114,7 @@ def run():
             print("Entry signal fired, but already holding a postion - skipping.")
         elif exit_ == 1 and existing_position:
             execute_sell(user_id, symbol, price)
-        elif entry == 1 and not existing_position:
+        elif exit_ == 1 and not existing_position:
             print("Exit signal fired, but no holding a postion - skipping.")
         else:
             print("No Signal - Holding")
