@@ -15,8 +15,12 @@ def get_position(user_id : int, symbol : str):
         .eq("user_id", user_id) \
         .eq("symbol" , symbol) \
         .execute()
+    
+    if not result.date[0]:
+        return None
+    position = result.data[0]
         
-    return result.data[0] if result.data else None
+    return position if position["quantity"] > 0 else None
 
 
 def get_account(user_id : int):
