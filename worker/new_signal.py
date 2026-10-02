@@ -28,7 +28,7 @@ def compute_ema(df : pd.DataFrame, fast_period = 21, slow_period = 9):
     return pd.DataFrame({"ema_fast" : fast_ema, "ema_slow" : slow_ema})
 
 
-def compute_vwap(df : pd.DataFrame);
+def compute_vwap(df : pd.DataFrame):
 
     typical_price = (df["High"] + df["Close"] + df["Low"]) / 3
     price_vol = typical_price * df["Volume"]
