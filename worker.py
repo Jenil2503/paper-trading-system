@@ -1,5 +1,5 @@
 from worker.price_fetch import fetch_ohlc
-from worker.new_signal import generate_signals
+from worker.signals import generate_signals
 from db import supabase
 
 def get_test_account():
