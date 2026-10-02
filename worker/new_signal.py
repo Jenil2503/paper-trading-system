@@ -51,8 +51,8 @@ def generate_signals(df : pd.DataFrame):
     df = df.copy()
     
     ema = compute_ema(df)
-    df["fast_ema"] = ema["fast_ema"]
-    df["slow_ema"] = ema["slow_ema"]
+    df["ema_fast"] = ema["ema_fast"]
+    df["ema_slow"] = ema["ema_slow"]
     
     df["vwap"] = compute_vwap(df)
     
