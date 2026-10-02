@@ -52,22 +52,6 @@ export default function Dashboard({ token, onLogout }) {
         <p><strong>Tracked Symbol:</strong> {account.tracked_symbol}</p>
       </div>
 
-      <div style={{ marginBottom: 30 }}>
-        <h3>Equity Curve</h3>
-        {equityCurve.length === 0 ? (
-          <p>No trades yet — equity curve will appear after the first trade.</p>
-        ) : (
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={equityCurve}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="timestamp" tick={{ fontSize: 10 }} />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="cash" stroke="#8884d8" />
-            </LineChart>
-          </ResponsiveContainer>
-        )}
-      </div>
 
       <div>
         <h3>Trade History</h3>

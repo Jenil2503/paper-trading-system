@@ -1,5 +1,5 @@
 from worker.price_fetch import fetch_ohlc
-from worker.signals import generate_signals
+from worker.new_signal import generate_signals
 from db import supabase
 
 def get_test_account():
@@ -89,7 +89,7 @@ def execute_sell(user_id : int, symbol : str, price : float):
 def run(): 
     accounts = get_test_account()
     accounts = accounts.data
-    # accounts = accounts[1
+
     for account in accounts:
         
         user_id = account["user_id"]
@@ -110,7 +110,7 @@ def run():
         existing_position = get_position(user_id, symbol)
         
         if entry == 1 and not existing_position:
-            # dollar_risk = 0.01*account["cash_balance"]
+            
             quantity = unit_size*account["cash_balance"]*.1
            
             execute_buy(user_id,symbol, price, quantity)
