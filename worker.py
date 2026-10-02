@@ -16,7 +16,7 @@ def get_position(user_id : int, symbol : str):
         .eq("symbol" , symbol) \
         .execute()
     
-    if not result:
+    if not result.data:
         return None
     position = result.data[0]
         
